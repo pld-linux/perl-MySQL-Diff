@@ -1,13 +1,12 @@
 #
-# NOTE: Tests require running mysql server and access to test_* tables
-#
 # Conditional build:
-%bcond_with	tests	# perform "make test"
+%bcond_with	tests	# perform "make test" (requires mysql server and access to test_* tables)
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	MySQL
 %define		pnam	Diff
-Summary:	MySQL-Diff perl module
+Summary:	MySQL::Diff Perl module - comparing the table structure of two MySQL databases
+Summary(pl):	Modu³ Perla MySQL::Diff - porównywanie struktury tabel dwóch baz danych MySQL
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.33
 Release:	1
@@ -16,9 +15,9 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	8f8e4af9eacd465814ce4071e9457272
 URL:		http://adamspiers.org/computing/mysqldiff/
+BuildRequires:	perl-Class-MakeMethods
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-Class-MakeMethods
 %if %{with tests}
 BuildRequires:	mysql-client
 %endif
@@ -27,8 +26,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-MySQL::Diff is Perl module for comparing the table structure of two MySQL
-databases.
+MySQL::Diff is Perl module for comparing the table structure of two
+MySQL databases.
+
+%description -l pl
+MySQL::Diff to modu³ Perla s³u¿±cy do porównywania struktury tabel
+dwóch baz danych MySQL.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
