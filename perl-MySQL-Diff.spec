@@ -1,6 +1,8 @@
 #
+# NOTE: Tests require running mysql server and access to test_* tables
+#
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	MySQL
@@ -8,7 +10,7 @@
 Summary:	MySQL-Diff perl module
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.33
-Release:	0.2
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
