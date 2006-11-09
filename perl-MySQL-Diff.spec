@@ -1,3 +1,5 @@
+# TODO
+# - active bugs: http://rt.cpan.org/Public/Dist/Display.html?Status=Active&Name=MySQL-Diff
 #
 # Conditional build:
 %bcond_with	tests	# perform "make test" (requires mysql server and access to test_* tables)
