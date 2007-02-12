@@ -8,7 +8,7 @@
 %define		pdir	MySQL
 %define		pnam	Diff
 Summary:	MySQL::Diff Perl module - comparing the table structure of two MySQL databases
-Summary(pl):	Modu³ Perla MySQL::Diff - porównywanie struktury tabel dwóch baz danych MySQL
+Summary(pl.UTF-8):   ModuÅ‚ Perla MySQL::Diff - porÃ³wnywanie struktury tabel dwÃ³ch baz danych MySQL
 Name:		perl-MySQL-Diff
 Version:	0.33
 Release:	2
@@ -31,13 +31,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 MySQL::Diff is Perl module for comparing the table structure of two
 MySQL databases.
 
-%description -l pl
-MySQL::Diff to modu³ Perla s³u¿±cy do porównywania struktury tabel
-dwóch baz danych MySQL.
+%description -l pl.UTF-8
+MySQL::Diff to moduÅ‚ Perla sÅ‚uÅ¼Ä…cy do porÃ³wnywania struktury tabel
+dwÃ³ch baz danych MySQL.
 
 %package -n mysqldiff
 Summary:	Perl script which compares the table definitions of two MySQL databases
-Summary(pl):	Skrypt Perla porównuj±cy definicje tabel dwóch baz danych MySQL
+Summary(pl.UTF-8):   Skrypt Perla porÃ³wnujÄ…cy definicje tabel dwÃ³ch baz danych MySQL
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 
@@ -51,14 +51,14 @@ structure of the first database to be identical to that of the second
 they are files containing table definitions or existing databases,
 local or remote.
 
-%description -n mysqldiff -l pl
-mysqldiff to skrypt Perla bêd±cy frontendem do modu³u CPAN MySQL::Diff
-porównuj±cego struktury danych (np. definicje tabel) dwóch baz danych
-MySQL i zwracaj±cy ró¿nice jako sekwencje poleceñ MySQL odpowiednie do
-przekierowania do polecenia mysql, które przekszta³ci strukturê
-pierwszej bazy danych tak, aby by³a identyczna z drug± (podobnie jak
-diff i patch). Struktury bazy danych mog± byæ porównywane je¶li s±
-plikami zawieraj±cymi definicje tabel albo istniej±cymi bazami -
+%description -n mysqldiff -l pl.UTF-8
+mysqldiff to skrypt Perla bÄ™dÄ…cy frontendem do moduÅ‚u CPAN MySQL::Diff
+porÃ³wnujÄ…cego struktury danych (np. definicje tabel) dwÃ³ch baz danych
+MySQL i zwracajÄ…cy rÃ³Å¼nice jako sekwencje poleceÅ„ MySQL odpowiednie do
+przekierowania do polecenia mysql, ktÃ³re przeksztaÅ‚ci strukturÄ™
+pierwszej bazy danych tak, aby byÅ‚a identyczna z drugÄ… (podobnie jak
+diff i patch). Struktury bazy danych mogÄ… byÄ‡ porÃ³wnywane jeÅ›li sÄ…
+plikami zawierajÄ…cymi definicje tabel albo istniejÄ…cymi bazami -
 lokalnymi lub zdalnymi.
 
 %prep
