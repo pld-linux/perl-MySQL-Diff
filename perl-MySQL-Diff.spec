@@ -8,7 +8,7 @@
 %define		pdir	MySQL
 %define		pnam	Diff
 Summary:	MySQL::Diff Perl module - comparing the table structure of two MySQL databases
-Summary(pl.UTF-8):   Moduł Perla MySQL::Diff - porównywanie struktury tabel dwóch baz danych MySQL
+Summary(pl.UTF-8):	Moduł Perla MySQL::Diff - porównywanie struktury tabel dwóch baz danych MySQL
 Name:		perl-MySQL-Diff
 Version:	0.33
 Release:	2
@@ -37,7 +37,7 @@ dwóch baz danych MySQL.
 
 %package -n mysqldiff
 Summary:	Perl script which compares the table definitions of two MySQL databases
-Summary(pl.UTF-8):   Skrypt Perla porównujący definicje tabel dwóch baz danych MySQL
+Summary(pl.UTF-8):	Skrypt Perla porównujący definicje tabel dwóch baz danych MySQL
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 
