@@ -11,7 +11,7 @@ Summary:	MySQL::Diff Perl module - comparing the table structure of two MySQL da
 Summary(pl.UTF-8):	Moduł Perla MySQL::Diff - porównywanie struktury tabel dwóch baz danych MySQL
 Name:		perl-MySQL-Diff
 Version:	0.33
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
