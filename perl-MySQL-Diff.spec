@@ -10,12 +10,12 @@
 Summary:	MySQL::Diff Perl module - comparing the table structure of two MySQL databases
 Summary(pl.UTF-8):	Moduł Perla MySQL::Diff - porównywanie struktury tabel dwóch baz danych MySQL
 Name:		perl-MySQL-Diff
-Version:	0.33
-Release:	3
+Version:	0.43
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	8f8e4af9eacd465814ce4071e9457272
+# Source0-md5:	5ca29ef5e07338fb5fa673fd298a000f
 URL:		http://adamspiers.org/computing/mysqldiff/
 BuildRequires:	perl-Class-MakeMethods
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -78,9 +78,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_bindir}
-install mysqldiff $RPM_BUILD_ROOT%{_bindir}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -88,11 +85,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %dir %{perl_vendorlib}/MySQL
-%{perl_vendorlib}/MySQL/Database.pm
 %{perl_vendorlib}/MySQL/Diff.pm
-%{perl_vendorlib}/MySQL/Table.pm
-%{perl_vendorlib}/MySQL/Utils.pm
+%dir %{perl_vendorlib}/MySQL/Diff
+%{perl_vendorlib}/MySQL/Diff/Database.pm
+%{perl_vendorlib}/MySQL/Diff/Table.pm
+%{perl_vendorlib}/MySQL/Diff/Utils.pm
+%{_mandir}/man3/MySQL::Diff.3pm*
+%{_mandir}/man3/MySQL::Diff::Database.3pm*
+%{_mandir}/man3/MySQL::Diff::Table.3pm*
+%{_mandir}/man3/MySQL::Diff::Utils.3pm*
 
 %files -n mysqldiff
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/mysqldiff
+%{_mandir}/man1/mysqldiff.1p*
