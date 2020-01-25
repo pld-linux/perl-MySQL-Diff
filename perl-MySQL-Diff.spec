@@ -4,7 +4,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (requires mysql server and access to test_* tables)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	MySQL
 %define		pnam	Diff
 Summary:	MySQL::Diff Perl module - comparing the table structure of two MySQL databases
